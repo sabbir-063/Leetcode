@@ -1,3 +1,11 @@
+/*
+Problem : https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/
+
+Author : Sabbir Musfique
+Time Complexity : O(n log(n))
+
+*/
+
 class Solution {
 public:
     bool possible(vector<int>&wt, int cap, int days){
