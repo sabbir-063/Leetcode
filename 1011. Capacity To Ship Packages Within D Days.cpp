@@ -9,6 +9,7 @@ Time Complexity : O(n log(n))
 class Solution {
 public:
     bool possible(vector<int>&wt, int cap, int days){
+        
         int dd=1, cnt=0;
         
         for(auto i : wt){
