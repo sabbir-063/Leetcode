@@ -3,7 +3,6 @@ Problem : https://leetcode.com/problems/ipo/
 
 Author : Sabbir Musfique
 Time Complexity : O(n log(n))
-
 */
 
 class Solution {
