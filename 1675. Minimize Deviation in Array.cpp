@@ -2,7 +2,7 @@
 Problem : https://leetcode.com/problems/minimize-deviation-in-array/
 
 Author : Sabbir Musfique
-Time Complexity : O(m log(n)) where (amotised)m always less than n
+Time Complexity : O(m log(n)) Where (amotised)m always less than n
 Space Complexity : O(n)
 */
 
