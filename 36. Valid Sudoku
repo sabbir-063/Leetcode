@@ -1,0 +1,42 @@
+class Solution {
+public:
+    bool isValidSudoku(vector<vector<char>>& board) {
+        bool flag=true;
+
+        for(int i=0; i<9; i++){
+            vector<int>arr(10, 0);
+            for(int j=0; j<9; j++) if(board[i][j] != '.') arr[board[i][j]- '0']++;
+            for(int j=1; j<=9; j++){
+                if(arr[j] > 1) return false;
+            }
+        }
+
+        for(int i=0; i<9; i++){
+            vector<int>arr(10, 0);
+            for(int j=0; j<9; j++) if(board[j][i] != '.') arr[board[j][i] - '0']++;
+            for(int j=1; j<=9; j++){
+                if(arr[j] > 1) return false;
+            }
+        }
+
+        for(int i=0; i<9; i+=3){
+            for(int j=0; j<9; j+=3){
+                vector<int>arr(10, 0);
+                for(int k=0; k<3; k++){
+                    for(int l=0; l<3; l++){
+                        if(board[i+k][j+l] != '.') arr[board[i+k][j+l] - '0']++;
+                    }
+                }
+
+                for(int m=1;m<=9;m++){
+                    if(arr[m] > 1) return false;
+                }
+            }
+        }
+
+        return true;
+    }
+};
+
+// Time Complexity : O(1)
+// Space Complexity : O(1)
